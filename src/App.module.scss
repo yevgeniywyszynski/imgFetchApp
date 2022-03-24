@@ -1,0 +1,69 @@
+.imageWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buttonWrapper{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.btn{
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #000;
+  
+
+}
+
+.btnText {
+  z-index: 9999;
+  position: relative;
+  transition: all 0.9s;
+}
+
+.btn::after{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: 0;
+  background-color: #000;
+  transition: all 0.9s;
+}
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover::after {
+  width: calc(100% + 4px);
+}
+
+@media (max-width: 991px) {
+  .imageWrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .image {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
